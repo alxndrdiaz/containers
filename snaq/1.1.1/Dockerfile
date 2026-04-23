@@ -20,7 +20,4 @@ RUN curl -fsSL https://install.julialang.org | sh -s -- -y
 
 ENV PATH="/home/biodocker/.juliaup/bin:$PATH"
 
-RUN julia -e 'using Pkg; Pkg.add(name="SNaQ", version="1.1.1")' && \
-    julia -e 'using SNaQ'
-
-CMD ["julia"]
+RUN julia -e 'using Pkg; Pkg.add(name="SNaQ", version="1.1.1")'
